@@ -44,16 +44,22 @@ const router = () => {
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route path="" element={<Home />}>
-          <Route path={"/game/:id"} element={<Detail />} 
-          errorElement={<ErrorElement />}/>
+          <Route
+            path={"/game/:id"}
+            element={<Detail />}
+            errorElement={<ErrorElement />}
+          />
         </Route>
         <Route
           path={"/search"}
           element={<Search />}
           errorElement={<ErrorElement />}
         >
-          <Route path={"/search/:id"} element={<Detail />} 
-          errorElement={<ErrorElement />}/>
+          <Route
+            path={"/search/:id"}
+            element={<Detail />}
+            errorElement={<ErrorElement />}
+          />
         </Route>
       </Route>
     )
